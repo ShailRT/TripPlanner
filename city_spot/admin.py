@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Spot, Gallery
 
-# Register your models here.
+admin.site.register(Spot)
+admin.site.register(Gallery)

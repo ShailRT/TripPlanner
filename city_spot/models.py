@@ -10,8 +10,11 @@ type_choices =(
 )
 
 class Gallery(models.Model):
-    title = models.CharField
+    title = models.CharField(max_length=200, default="photo-site")
     image = models.ImageField(upload_to="gallery/")
+
+    def __str__(self):
+        return self.title 
 
 class Spot(models.Model):
     spot_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -21,7 +24,9 @@ class Spot(models.Model):
     main_image = models.ImageField(upload_to="spot_image/")
     gallery = models.ManyToManyField(Gallery, null=True, blank=True)
     description = models.TextField()
-    location = models.CharField(max_length=400)
+    city = models.CharField(max_length=20, blank=True, null=True)
+    state = models.CharField(max_length=20, blank=True, null=True)
+    location_url = models.CharField(max_length=400)
 
     def __str__(self):
         return self.name
