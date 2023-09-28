@@ -38,7 +38,7 @@
     </div>
   </div>
 </header>
-<section class="explore-section section-padding section-bg" id="section_2">
+<section class="explore-section section-padding section-bg">
   <div class="container text-center">
     <h2 class="mb-4">Trip Overview</h2>
     <div class="tab-content section-bg" id="myTabContent">
@@ -46,10 +46,10 @@
         tabindex="0">
         <div class="row section-bg">
           {% for spot in spots %}
-          <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-            <div class="custom-block bg-white shadow-lg">
+          <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-4">
+            <div class="custom-block bg-white shadow-lg text-center">
               <a href="/spot/{{spot.slug}}/">
-                <div class="d-flex">
+                <div class="text-center">
                   <div>
                     <h5 class="mb-2">{{spot.name}}</h5>
 

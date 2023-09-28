@@ -42,17 +42,20 @@
 
                         <div class="col-lg-8 col-12 m-auto">
                             <h3 class="mb-4">{{spot.name}}</h3>
+                            <p>
                             {{spot.description}}
-
-                            <blockquote class="text-center">
-                                Hightlights of {{spot.name}}
-                            </blockquote>
+                            </p>
+                            <div class="text-center">
+                                <blockquote class="text-center">
+                                    Hightlights of {{spot.name}}
+                                </blockquote>
+                            </div>  
 
                             <div class="row my-4">
                                 
                                     {% for gal in spot.gallery.all %}
                                     <div class="col-lg-6 col-md-6 col-12">
-                                        <img src="{{gal.image.url}}" class="topics-detail-block-image img-fluid">
+                                        <img src="{{gal.image.url}}" class="topics-detail-block-image img-fluid" style="height: 280px !important;">
                                     </div>
                                     {% endfor %}
                                
